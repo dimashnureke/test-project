@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+}
+
+aside{
+    flex-basis: 20%;
+    height: 90vh;
+    background-color: aquamarine;
+    @media (max-width:480px) {
+        display: none;
+    }
+}
