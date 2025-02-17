@@ -1,14 +1,87 @@
-header{
-    display: flex;
-    flex-direction: column;
-    height: 10vh;
-}
-
-aside{
-    flex-basis: 20%;
-    height: 90vh;
-    background-color: aquamarine;
-    @media (max-width:480px) {
-        display: none;
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  .logo {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+  }
+  .change-language-container{
+    position: absolute;
+    left: 10vh;
+    @media (max-width: 480px) {
+      left: 3vh;
     }
+  }
+  .hamburger {
+    position: absolute;
+    right: 10vh;
+    @media (max-width: 480px) {
+      right: 3vh;
+    }
+    cursor: pointer;
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      border-radius: 999px;
+      background-color: #333;
+      transition: all 0.3s ease-in-out;
+      &.clicked:nth-child(2) {
+        opacity: 0;
+      }
+      &.clicked:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      &.clicked:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  .sideBar {
+    z-index: 0;
+    position: fixed;
+    top: 10vh;
+    background-color: #333;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    &.hidden {
+      right: -100%;
+    }
+    &.visible {
+      right: 0;
+    }
+  }
+  .filters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .filter {
+      padding: 8px
+    }
+   
+    form{
+      display: flex;
+      gap: 16px;
+    }
+    input{
+      flex: 1;
+      height: 1.25rem;
+    }
+    select{
+      flex: 1;
+      height: 1.25rem;
+    }
+    label{
+      flex: 1;
+      color: #fff;
+    }
+  }
 }

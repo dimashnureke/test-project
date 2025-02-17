@@ -1,0 +1,17 @@
+{
+  "region": "Регион",
+  "population": "Население",
+  "no-bordering-countries": "Нет граничащих стран",
+  "bordering-countries": "Граничащая страна(ы)",
+  "loading": "загрузка...",
+  "error": "ошибка",
+  "search-by-name":"Поиск по имени",
+  "search-by-region":"Поиск по региону",
+  "search-by-population":"Поиск по населению",
+  "all-regions":"Все регионы",
+  "africa":"Африка",
+  "americas":"Америка",
+  "asia":"Азия",
+  "europe":"Европа",
+  "oceania":"Океания"
+}

@@ -1,4 +1,12 @@
-# React + TypeScript + Vite
+# Тестовый проект
+
+# команды
+
+- npm install @reduxjs/toolkit react-redux
+- npm i react-router
+- npm i -D react-router-dom
+- npm i i18next react-i18next i18next-http-backend i18next-browser-languagedetector
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -48,6 +56,4 @@ export default tseslint.config({
   },
 })
 ```
-npm install @reduxjs/toolkit react-redux
-npm i react-router
-npm i -D react-router-dom
+

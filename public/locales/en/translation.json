@@ -1,0 +1,17 @@
+{
+  "region": "Region",
+  "population": "Population",
+  "no-bordering-countries": "No bordering countries",
+  "bordering-countries": "Bordering country(ies)",
+  "loading": "loading...",
+  "error": "error",
+  "search-by-name":"Search by Name",
+  "search-by-region":"Search by Region",
+  "search-by-population":"Search by Population",
+  "all-regions":"All Regions",
+  "africa":"Africa",
+  "americas":"Americas",
+  "asia":"Asia",
+  "europe":"Europe",
+  "oceania":"Oceania"
+}
