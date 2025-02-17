@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Card from "../../../entities/Card/ui/Card";
 import { useGetCountriesQuery } from "../../../shared/api/jsonCountriesApi";
 import { useTranslation } from "react-i18next";
+import i18n from "../../../shared/i18n/i18n";
 
 const DetailedCard = () => {
   const params = useParams();
@@ -23,7 +24,7 @@ const DetailedCard = () => {
             alt={selectedCountry.name.common}
             className="flag"
           />
-          <h2>{selectedCountry.name.common}</h2>
+          <h2>{i18n.language==="en" ? selectedCountry.name.common : selectedCountry.translations.rus.common}</h2>
         </div>
         <div className="secondary-info">
           <p>{t("region") + ": " + selectedCountry.region}</p>

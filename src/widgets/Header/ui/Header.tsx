@@ -24,6 +24,7 @@ const Header = () => {
   const [sideBarClass, setSideBarClass] = useState("sideBar hidden");
   const [isBurgerClicked, setIsBurgerClicked] = useState(false);
   const { t, i18n } = useTranslation();
+  const [isInitialized, setIsInitialized] = useState(false);
 
   const updateBurger = () => {
     if (!isBurgerClicked) {
@@ -41,19 +42,21 @@ const Header = () => {
   };
 
   useEffect(() => {
-    saveFilters({ searchQuery, region, minPopulation });
-  }, [searchQuery, region, minPopulation]);
-  
-  useEffect(() => {
     const savedFilters = loadFilters();
     if (savedFilters) {
       dispatch(setFilters(savedFilters));
     }
-    console.log(savedFilters)
+    setIsInitialized(true);
   }, [dispatch]);
+  
+  
+  useEffect(() => {
+    if (isInitialized) {
+      saveFilters({ searchQuery, region, minPopulation });
+    }
+  }, [searchQuery, region, minPopulation, isInitialized]);
 
   
-
   return (
     <>
       <header>

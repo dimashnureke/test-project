@@ -161,4 +161,10 @@ section {
   background-color: aqua;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
   transition: all 200ms;
+}
+.card img {
+  height: 80px;
+}
+.card p {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

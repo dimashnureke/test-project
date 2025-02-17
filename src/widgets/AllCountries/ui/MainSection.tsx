@@ -5,11 +5,11 @@ import { selectFilteredCountries } from "../../../shared/modal/selectors";
 
 const MainSection = () => {
   const countries = useSelector(selectFilteredCountries);
-  const { isError, isLoading } = useGetCountriesQuery();
+  const { data,isError, isLoading } = useGetCountriesQuery();
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Error</p>;
-
+console.log(data)
   return (
     <section>
       <div className="card-container">
